@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculadora em Javascript</title>
+<script>
+/*
+Δ = b² - 4.a.c
+x = (-b ± √Δ) / 2.a
+*/
+function Calcular(){
+/*
+var a = document.getElementById("a").value;
+var b = document.getElementById("b").value;
+var c = document.getElementById("c").value;
+var Δ = b² - 4.a.c;
+var x =  
+*/
+var a = document.getElementById("a").value;
+var b = document.getElementById("b").value;
+var c = document.getElementById("c").value;
+var Δ = (b*b) - (4*a*c);
+var x1 = (+b + (Δ/Δ) / (2*a));
+var x2 = (-b - (Δ/Δ) / (2*a));
+/*
+alert("O valor de delta é:\n" + Δ + "\n\nO valor de x é:\n" + x1 + "\nou\n" + x2);
+*/
+document.getElementById("resposta").innerHTML = ("Δ = " + Δ + "<br>x(1) = " + x1 + "<br>x(2) = " + x2);
+}
+</script>
+<style>
+input[type="number"] {
+   width:80px;
+}
+#resposta{
+background: #009900;
+color: #ffffff;
+border: 1px outset #009900;
+font: 15px Verdana;
+width: 200px;
+margin: 10px 0 0 0;
+padding: 6px;
+display: none;
+}
+</style>
+</head>
+<body>
+<fieldset>
+    <legend>Cálcular equação do segundo grau:</legend>
+    <label>a:</label>
+    <input id="a" type="number"/>
+    <label>b: </label>
+    <input id="b" type="number"/>
+    <label>c: </label>
+    <input id="c" type="number"/>
+    <button id="c" onclick="document.getElementById('resposta').style.display = 'block'; Calcular();">Calcular</button>
+</fieldset>
+<div id="resposta">
+Resposta:
+</div>
+
+</body>
+</html>
+
+
