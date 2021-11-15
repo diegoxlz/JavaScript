@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculadora em Javascript</title>
+<script>
+/*
+IMC = Peso / (altura x altura)
+*/
+function CalcularIMC(){
+var peso = document.getElementById("peso").value;
+var altura = document.getElementById("altura").value;
+var IMC = peso / (altura * altura)
+document.getElementById("resposta").innerHTML = ("IMC = " + IMC);
+}
+</script>
+<style>
+input[type="number"] {
+   width:80px;
+}
+#resposta{
+background: #009900;
+color: #ffffff;
+border: 1px outset #009900;
+font: 15px Verdana;
+width: 250px;
+margin: 10px 0 0 0;
+padding: 6px;
+display: none;
+}
+</style>
+</head>
+<body>
+<fieldset>
+    <legend>Cálcular IMC:</legend>
+    <label>Altura:</label>
+    <input id="altura" type="number" placeholder="ex.: 1.80" aria-label="ex.: 1.80"/>
+    <label>Peso: </label>
+    <input id="peso" type="number" placeholder="ex.: 90" aria-label="ex.: 90"/>
+    <button onclick="document.getElementById('resposta').style.display = 'block'; CalcularIMC();">Calcular</button>
+</fieldset>
+<div id="resposta">
+Resposta:
+</div>
+<br><br>
+<img src="https://emagrecercomsucesso.com/wp-content/uploads/calculo-imc.png" width="500">
+</body>
+</html>
+
+
